@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!---------title---------->
+<title>PCCargaProject</title>
+
+<!-- Custom fonts for this template-->
+<link href="views/static/css/all.min.css" rel="stylesheet" type="text/css">
+
+<!-- Page level plugin CSS-->
+<link href="views/static/css/dataTables.bootstrap4.css" rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="views/static/css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+	<table class="table table-striped table-dark">
+	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+		<thead>
+			<tr>
+				<th scope="col">Docente</th>
+				<th scope="col">Horas Semanales</th>
+				<th scope="col">Semestre Academico</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="carga : ${listCargaacademica}">
+				<th th:text="${carga.nombre}"></th>
+				<th th:text="${carga.horas}"></th>
+				<th th:text="${carga.semestre_academico }"></th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
